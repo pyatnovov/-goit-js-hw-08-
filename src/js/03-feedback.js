@@ -23,7 +23,7 @@ function onFormSubmit(e) {
     e.preventDefault();
     console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
 
-    localStorage.clear();
+    localStorage.removeItem("feedback-form-state");
     
     if (form.elements.email.value || form.elements.message.value) {
         e.currentTarget.reset();
