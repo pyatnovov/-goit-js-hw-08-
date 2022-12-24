@@ -34,8 +34,9 @@ function onFormSubmit(e) {
 function onPageLoading() {
     const parsedData = JSON.parse(localStorage.getItem(localStorageKey));
     
-    if (!email.value) return;
-
+    if (!parsedData) {
+        return;
+    }
     email.value = parsedData.email;
     message.value = parsedData.message;
     
