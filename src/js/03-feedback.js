@@ -10,7 +10,7 @@ const message = form.elements.message;
 
 form.addEventListener("input", Lodash(onFormInput, 500));
 form.addEventListener("submit", onFormSubmit);
-
+onPageLoading();
 
 function onFormInput() {
     const formData = {
